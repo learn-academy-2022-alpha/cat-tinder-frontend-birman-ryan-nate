@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import AnimalIndex from './pages/AnimalIndex'
+import AnimalShow from './pages/AnimalShow'
+import AnimalEdit from './pages/AnimalEdit'
+import AnimalNew from './pages/AnimalNew'
+import NotFound from './pages/NotFound'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
+import mockAnimals from './mockAnimals'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      animals: mockAnimals
+    }
+  }
+  render() {
+    return ( 
+      <div className='background'>
+        <Header />
+        <h1 class="title">Down to Flirt</h1>
+        <p>{this.state.animals.map(animals => `${animals.name} `)}<br /></p>
+
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/AnimalIndex" component={AnimalIndex} />
+            <Route path="/AnimalShow" component={AnimalShow} />
+            <Route path="/AnimalNew" component={AnimalNew} />
+            <Route path="/AnimalEdit" component={AnimalEdit} />
+            <Route component={NotFound}/>
+          </Switch>
+        </Router>
+      <Footer />
+      </div>
+    )
+  }
 }
+
 
 export default App;
