@@ -27,8 +27,8 @@ class App extends Component {
     return ( 
       <div className='background'>
         <Header />
-        <h1 class="title">Down to Flirt</h1>
-        <p>{this.state.animals.map(animals => `${animals.name} `)}<br /></p>
+        
+        
 
         <Router>
           <Switch>
