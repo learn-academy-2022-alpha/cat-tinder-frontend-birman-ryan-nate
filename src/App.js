@@ -27,9 +27,6 @@ class App extends Component {
     return ( 
       <div className='background'>
         <Header />
-        
-        
-
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />

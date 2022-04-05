@@ -15,8 +15,8 @@ Enzyme.configure({adapter: new Adapter()})
 
 describe('When home renders', () => {
     it('should render a h1', () => {
-        const renderNotFound = shallow(<NotFound />)
-        const NotFoundHeading = renderNotFound.find("h1").text()
-        expect(NotFoundHeading).toEqual('Nothing is here')
+        const rendernotFound = shallow(<NotFound />)
+        const notFoundHeading = rendernotFound.find("h1").text()
+        expect(notFoundHeading).toEqual('Nothing is here')
     })
 })

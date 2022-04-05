@@ -16,7 +16,7 @@ Enzyme.configure({adapter: new Adapter()})
 describe('When home renders', () => {
     it('should render a h1', () => {
         const renderHome = shallow(<Home />)
-        const homeHeading = renderHome.find("h1").text()
-        expect(homeHeading).toEqual('Animals')
+        const homeHeadingText = renderHome.find("h1").text()
+        expect(homeHeadingText).toEqual('Animals')
     })
 })
