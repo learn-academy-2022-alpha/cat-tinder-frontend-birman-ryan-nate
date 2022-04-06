@@ -1,4 +1,4 @@
-let cats = [
+let animals = [
     {
       id: 1,
       name: "Mittens",
@@ -23,4 +23,4 @@ let cats = [
   ]
 
 
-  export default cats
+  export default animals
