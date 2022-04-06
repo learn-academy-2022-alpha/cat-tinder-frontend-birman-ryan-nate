@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import "./pages.css"
 export class AnimalNew extends Component {
   render() {
     return (
