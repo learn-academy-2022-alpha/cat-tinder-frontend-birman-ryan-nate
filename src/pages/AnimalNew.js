@@ -16,8 +16,6 @@ export class AnimalNew extends Component {
     };
   }
   handleChange = (e) => {
-    // console.log(e.target.name);
-    // console.log(e.target.value);
     let { form } = this.state;
     form[e.target.name] = e.target.value;
     this.setState({ form: form });
