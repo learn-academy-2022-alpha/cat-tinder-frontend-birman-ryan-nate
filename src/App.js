@@ -30,8 +30,13 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/AnimalIndex" component={AnimalIndex} />
-            <Route path="/AnimalShow" component={AnimalShow} />
+            <Route path="/AnimalIndex" 
+              render={(props) => <AnimalIndex animals={this.state.animals} /> }/>
+            <Route path="/AnimalShow/:id"
+              render={(props) => {
+              let id = props.match.params.id
+              let animal = this.state.animals.find(animal => animal.id === +id)
+                return <AnimalShow animal={animal} />}} />
             <Route path="/AnimalNew" component={AnimalNew} />
             <Route path="/AnimalEdit" component={AnimalEdit} />
             <Route component={NotFound}/>

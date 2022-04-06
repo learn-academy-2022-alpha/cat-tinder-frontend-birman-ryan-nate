@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 export class AnimalEdit extends Component {
   render() {
     return (
