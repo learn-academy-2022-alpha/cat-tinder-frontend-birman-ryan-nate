@@ -8,9 +8,13 @@ export class AnimalIndex extends Component {
         <h2>Available to flirt</h2>
         {this.props.animals && this.props.animals.map(animal => {
           return(
-            <NavLink to={`/AnimalShow/${animal.id}`} key={animal.id}>
+            // <li>
+              <ul>
+                <NavLink to={`/AnimalShow/${animal.id}`} key={animal.id}>
               {animal.name}
-            </NavLink>
+              </NavLink>
+            </ul>
+            // </li>
           )
         })}
       </>

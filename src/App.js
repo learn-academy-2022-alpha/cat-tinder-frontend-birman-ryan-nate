@@ -17,34 +17,47 @@ import mockAnimals from './mockAnimals'
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      animals: mockAnimals
-    }
+      animals: mockAnimals,
+    };
   }
+  createAnimal = (newAnimal) => {
+    console.log("Animal was created", newAnimal);
+  };
   render() {
-    return ( 
-      <div className='background'>
+    return (
+      <div className="background">
         <Header />
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/AnimalIndex" 
-              render={(props) => <AnimalIndex animals={this.state.animals} /> }/>
-            <Route path="/AnimalShow/:id"
+            <Route
+              path="/AnimalIndex"
+              render={(props) => <AnimalIndex animals={this.state.animals} />}
+            />
+            <Route
+              path="/AnimalShow/:id"
               render={(props) => {
-              let id = props.match.params.id
-              let animal = this.state.animals.find(animal => animal.id === +id)
-                return <AnimalShow animal={animal} />}} />
-            <Route path="/AnimalNew" component={AnimalNew} />
+                let id = props.match.params.id;
+                let animal = this.state.animals.find(
+                  (animal) => animal.id === +id
+                );
+                return <AnimalShow animal={animal} />;
+              }}
+            />
+            <Route
+              path="/AnimalNew"
+              render={(props) => <AnimalNew createAnimal={this.createAnimal} />}
+            />
             <Route path="/AnimalEdit" component={AnimalEdit} />
-            <Route component={NotFound}/>
+            <Route component={NotFound} />
           </Switch>
         </Router>
-      <Footer />
+        <Footer />
       </div>
-    )
+    );
   }
 }
 
