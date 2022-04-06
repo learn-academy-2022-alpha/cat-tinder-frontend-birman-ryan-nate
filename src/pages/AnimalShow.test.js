@@ -18,7 +18,7 @@ describe('When AnimalIndex renders', () => {
     it('should render a heading', () => {
         const showAnimal = shallow(<AnimalShow animal = {mockAnimals[0]}/>)
         const showHeader = showAnimal.find("h2")
-        expect(showHeader.text()).toEqual("AnimalShow")
+        expect(showHeader.text()).toEqual("Profile")
 
     })
 })

@@ -5,13 +5,13 @@ export class AnimalShow extends Component {
     let { animal } = this.props
     return (
       <>
-        <h2>AnimalShow</h2>
-        <p>{animal.name}</p>
-        <p>{animal.age}</p>
-        <p>{animal.enjoys}</p>
-        <img src={animal.image}/>
+        <h2 className="align">Profile</h2>
+        <p className="align">{animal.name}</p>
+        <p className="align">{animal.age}</p>
+        <p className="align">{animal.enjoys}</p>
+        <img src={animal.image} className="center" />
       </>
-    )
+    );
   }
 }
 
