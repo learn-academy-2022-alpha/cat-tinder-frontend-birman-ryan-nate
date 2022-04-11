@@ -2,33 +2,133 @@
   text-align: center;
 }
 .background {
-  background-color: #CC6B2F;
+  background-color: #E8C07D;
   color: black;
+  height: 100vh
 }
 .title{
   text-align: center;
-  background-color: #CC6B2F;
+  background-color: #E8C07D;
   
 }
-body {
-  background-color: #CC6B2F;
+.body {
+  background-color: #E8C07D;
+  height: 100vh
 }
 .home {
   height: 100vh;
 }
-.header {
-  text-align: center;
-  color: #CC6B2F;
-  background-image: url(https://cdn.hovia.com/app/uploads/Jungle-Animals-Wallpaper-Mural-Plain.jpg);
-  padding: 2.0em;
-}
+
+
 .footer {
-  padding-top: 0.75em;
-  padding: 1.5em;
-  text-align: center;
+  font-size: 20px;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: black;
-  color: #2DA870;
+  display: flex;
+  justify-content: space-around;
+  color: #CC704B;
 }
 
+
+
+/* header  */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 50px;
+  position: relative;
+  top: -150px;
+}
+.header {
+  text-align: center;
+  color: #CC704B;
+  /* background-image: url(https://cdn.hovia.com/app/uploads/Jungle-Animals-Wallpaper-Mural-Plain.jpg); */
+  padding: 2.0em;
+  background-color: #9FC088;
+}
+.homeicon {
+  font-size: 30px;
+}
+
+/* home page */
+.page {
+  text-align: center;
+  height: 100vh;
+  background-color: #E8C07D;
+}
+
+
+/* show */
+.showpage {
+  height: 200vh;
+  background-color: #E8C07D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -100px;
+}
+.align {
+  text-align: center
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+/* index  */
+.index-page {
+  text-align: center;
+  
+}
+.index-name {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 200vh;
+  background-color: #E8C07D;
+}
+.card.card-body {
+  width: 200px;
+  background-color: #FFFEF1;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.btn.btn-secondary {
+  background-color: green;
+  font-weight: bolder;
+  margin: 10px;
+  
+}
+.btn.btn-secondary:hover {
+  color: green;
+  background-color: white;
+}
+/* new */
+.newpage {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E8C07D;
+}
+.form {
+  width: 50%;
+}
+
+/* EDIT PAGE */
+.editform {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E8C07D;
+}

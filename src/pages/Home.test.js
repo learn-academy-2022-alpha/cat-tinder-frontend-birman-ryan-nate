@@ -17,6 +17,6 @@ describe('When home renders', () => {
     it('should render a h1', () => {
         const renderHome = shallow(<Home />)
         const homeHeadingText = renderHome.find("h1").text()
-        expect(homeHeadingText).toEqual('Animals')
+        expect(homeHeadingText).toEqual("Click here to flirt now");
     })
 })
